@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper namespace="board">
+<select id="listAll" resultType="com.springbook.biz.board.BoardVO">
+	<!-- 회원 권한이 없는 게시글 목록 쿼리 -->
+	SELECT SEQ, TITLE, WRITER, CONTENT, b.REGDATE, CNT, uname from BOARD b, USER u
+	
+	<!-- where 절을 include 태그로 삽입 -->
+	<include refid="search"></include>
+	ORDER BY SEQ desc, REGDATE desc
+	
+</select>
+
+<!-- 게시글 레코드 갯수 -->
+<select id="countArticle" resultType="int">
+	select COUNT(*) from BOARD b, USER u
+		<!-- where 절을 include 태그로 삽입 -->
+	<include refid="search"></include>	
+	
+</select>
+
+<!-- sql code -->
+<!-- 반복되는 sqlㅇ 일부 sql 코드를 이용해 빼둠 -->
+<sql id="search">
+	<choose>
+		<!-- 검색 옵션이 전체 검색일 경우 -->
+		<when test ="searchOption =='all'">
+			WHERE b.writer = u.uname
+			AND
+				(uname like '%'||#{keyword)||'%'
+				OR CONTENT like '%'||#{keyword)||'%'
+				OR TITLE like '%'||#{keyword)||'%'
+		</when>
+		
+		<!-- 전체 검색이 아닐 경우 -->
+		<otherwise>
+			WHERE b.writer=u.uname
+			AND ${searchOption} like '%'||#{keyword}||'%'
+		</otherwise>
+	</choose>
+</sql>
+</mapper>

@@ -1,0 +1,185 @@
+body{background:#ffffff;
+line-height:1.5;
+font-family:'Nanum Gothic';
+text-transform:uppercase;
+font-size:1px;
+margin:0;
+padding : 0;
+/*color:#fff;*/
+}
+
+body {
+	margin : 0;
+	padding : 0;
+}
+
+/* a링크(하이퍼링크) 설정 */
+a{text-decoration:none;color:#fff}
+
+/* 헤더 부분 설정 */
+#header{background:#008100;  width:100%;
+height:25px;position:relative; color : #fff;}
+/*#header:after{content:"";clear:both;display:block}*/
+.search{float:right; padding:15px}
+.logo{float:left;padding:10px 0 26px}
+.logo a{font-size:28px;display:block;padding:0 0 0 20px}
+/* 헤더에 포함된 컨텐츠 리스트 네비게이션 설정 */
+nav{float:right;}
+nav{ margin : 0; padding:4px 30px}
+nav>ul{float:left;position:relative}
+nav li{list-style:none;float:left}
+nav .dropdown{position:relative}
+nav li a{float:left;padding:0px 10px 0px 10px}
+/*nav li a:hover{background:#1D8B15}*/
+nav li ul{display:none}
+nav li:hover ul{display:inline}
+nav li li{float:none}
+nav .dropdown ul{position:absolute;left:0;top:100%;background:#fff;padding:20px 0;border-bottom:3px solid #34495e}
+nav .dropdown li{white-space:nowrap}
+nav .dropdown li a{padding:10px 35px;font-size:13px;min-width:200px}
+nav .mega-dropdown{width:100%;position:absolute;top:100%;left:0;background:#fff;overflow:hidden;padding:30px 35px;border-bottom:3px; solid #34495e}
+nav li li hd{float:none;color:#fff;display:block;padding:px 10px;border-radius:3px;font-size:13px}
+nav li li a:hover{background:#bdc3c7;background:#FAFBFB}
+
+
+/* 헤더 아래 홈페이지 들어가는 네비게이션 */
+.boardnav {
+	width: 100%;
+	height : 65px;
+	background:#ffffff;
+	box-shadow: 0px 8px 10px -10px green;
+}
+
+/* 회색 네비게이션 바 */
+.bar {
+  width : 100%;
+  height : 30px;
+  background: #f7f5f5;
+  border-bottom: 1px solid #ebe9e9;
+  margin: 4px;
+}
+
+/* home/게시판 해당 내용이 들어감 */
+.barcontent {
+  padding : 5px 200px;
+  float : right;
+}
+
+/* 글쓰기 하이퍼링크 */
+.write{
+  color : black;
+  font-size : 13px;
+  padding : 0 0 0 530px;
+}
+
+/* 하이퍼링크 home 설정 */
+.home{
+  color : black;
+  font-size : 3px;
+}
+
+
+/* 네비게이션의 '홈페이지' 위치 설정 */
+.title {
+  padding : 10px 0px 0px 90px;
+}
+.page {
+  font-size : 25px;
+  font-weight: bold;
+  color : #5D5D5D;
+  text-decoration:none;
+}
+
+/* 검색창 공간 설정 */
+.boardsearch {
+  margin-top : -30px;
+  margin-left : 29%;
+}
+
+/* 검색창 테두리 설정 */
+.searchline {
+  border : none;
+}
+
+/* select 속성 설정 */
+select {
+  width : 70px;
+  height : 25px;
+  font-size : 13px;
+  color : #8C8C8C;
+  border : 2px solid #999;
+}
+
+/* input 요소 설정 */
+input {
+  height : 25px;
+  border : 2px solid #999;
+}
+
+/* 검색창의 검색 버튼 */
+.button1 {
+  height : 26px;
+  background : #006700;
+  color : #fff;
+  border : 2px solid #006700;
+}
+
+/* 테이블 설정 */
+.boardtable {
+  border-top: 1px solid #444444;
+  margin-top : 5px;
+}
+
+/* '게시판 목록' 설정 */
+.blist {
+  font-size : 20px;
+  margin-left : 27%;
+}
+
+/* 게시글 제목 하이퍼링크 설정 */
+.boardtitle {
+	color : #000000;
+}
+
+/* 게시판 목록 아래 선 설정 */
+.listhr {
+  width : 695px;
+  margin-left:-2px;
+}
+
+/* 게시판 설명 정보 설정 */
+.information {
+  font-size : 4px;
+  margin-top : 4px;
+  margin-bottom : 5px;
+}
+
+/*  테이블 컬럼 설정 */
+th {
+    background-color: #F9F9F9;
+    font-size:12px;
+    height : 30px;
+    border-bottom: 1px solid #D2D2D2;
+    border-right: 1px solid #D2D2D2;
+    vertical-align: middle;
+}
+
+/*  마지막 컬럼 우측 선 삭제 */
+.thlast {
+    border-right:none;
+}
+
+/* 테이블 내용 설정 */
+td {
+    vertical-align: middle;
+    text-align: center;
+    font-size:10px;
+    height : 25px;
+    border-bottom: 1px solid #D2D2D2;
+    border-right: 1px solid #D2D2D2;
+}
+
+/*  마지막은 우측 선 삭제 */
+.lasttd {
+  border-right : none;
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="JoinDAO">
+   
+   <resultMap id="userReulst" type="join">
+   		<result property="uname" column="UNAME" />
+		<result property="upw" column="UPW" />
+		<result property="uemail" column="UEMAIL" />
+		<result property="uage" column="UAGE" />
+		<result property="ujob" column="UJOB" />
+	</resultMap>
+   
+    <!-- 회원 가입 -->
+    <insert id="insertUser" parameterType="join">
+    	<![CDATA[
+    	INSERT INTO USER(UNAME, UPW, UEMAIL, UAGE, UJOB)
+    	VALUES(#{uname}, #{upw} , #{uemail}, #{uage}, #{ujob})   
+    	]]>
+    </insert>
+
+</mapper>
